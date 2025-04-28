@@ -1,0 +1,89 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.bowlby-one {
+    font-family: "Bowlby One SC", sans-serif;
+}
+
+.public-sans {
+    font-family: "Public Sans", sans-serif;
+}
+
+a {
+    color: #f25c16;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+a:hover {
+    font-size: 1.1em;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section h4 {
+    font-size: 2rem;
+}
+
+section h3 {
+    font-size: 2.5rem;
+}
+
+/* Google Maps iFrame */
+.map-container {
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-container iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+footer h6 {
+    margin: 0;
+    font-size: 1.9rem;
+}
