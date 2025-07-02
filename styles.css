@@ -1,15 +1,27 @@
+/* Variables */
+:root {
+    --oorange: #f25c16;
+    --dark: #333;
+    --light: #f9f9f9;
+    --shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
 /* Base Styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--dark);
+    background-color: var(--light);
 }
 
 .bowlby-one {
     font-family: "Bowlby One SC", sans-serif;
+}
+
+.bebas {
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .public-sans {
@@ -17,7 +29,7 @@ body {
 }
 
 a {
-    color: #f25c16;
+    color: var(--oorange);
     text-decoration: none;
     transition: font-size 0.3s ease;
 }
@@ -28,25 +40,40 @@ a:hover {
 
 /* Header */
 header {
-    background: #333;
-    color: #fff;
+    background: var(--dark);
+    color: var(--light);
     padding: 1rem;
     text-align: center;
+    box-shadow: var(--shadow);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 6em;
+}
+
+.btn-primary {
+    background-color: var(--oorange);
+    border: none;
+    padding: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark);
+    color: var(--light);
+
 }
 
 /* Main Content */
 main {
+    margin: 40px;
     padding: 20px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* text-align:justify; */
 }
 
 section h4 {
@@ -55,6 +82,19 @@ section h4 {
 
 section h3 {
     font-size: 2.5rem;
+}
+
+/* RATES */
+.monthly,
+.hourly {
+    width: 100%;
+    text-align: center;
+}
+
+.monthly ul,
+.hourly ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
 /* Google Maps iFrame */
@@ -73,8 +113,8 @@ section h3 {
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background: var(--dark);
+    color: var(--light);
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Orb Studios">
     <title>Orb Studios</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- MY CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +17,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fascinate&display=swap"
+        rel="stylesheet">
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="public/faders.png" sizes="16x16">
 </head>
 
 <body>
     <header>
-        <h1 class="bowlby-one">Welcome to Orb Studios</h1>
+        <h1 class="bebas">Welcome to Orb Studios</h1>
     </header>
 
     <main>
-        <section>
-            <h3 class="public-sans">Opening soon as a rehearsal and recording space for monthly or hourly bookings.
-                Including gear storage
-                for long term bands, analogue recording capability, and a comfortable space to create.
-            </h3>
-            <h4><a href='mailto: orbmusicstudios@gmail.com'>Contact now for monthly rates!</a></h4>
+        <!-- MAIN BLURB -->
+        <section class="blurb">
+            <h4>We are a new rehearsal and recording space in Etobicoke, Ontario. We offer a private yet personal space
+                for bands and artists to rent on either a monthly or hourly basis to create music.With a collection of
+                gear on site, or the option for gear storage for our monthly rental customers, Orb Studios is the place
+                to hole up and create your next masterpiece.</h4>
         </section>
+        <!-- RATES -->
+        <section class="rates d-inline-flex justify-content-evenly m-2 p-2">
+            <div class="card monthly m-2 shadow">
+                <h1 class="card-header">Monthly Rate</h1>
+                <div class="card-body">
+                    <h2 class="card-text">$350 per month</h2>
+                    <ul>
+                        <li>32 hours bookable 24/7 across each month</li>
+                        <li>Hours can be booked in any configuration (2 Hours, 24 Hour lockout, etc.)</li>
+                        <li>Complete access to Studio A</li>
+                        <li>Complete Access to Control Room</li>
+                        <li>Gear storage for amps, drums, etc.</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+            <div class="card hourly m-2 shadow">
+                <h1 class="card-header">Hourly Rate</h1>
+                <div class="card-body">
+                    <h2 class="card-text">$50 per hour</h2>
+                    <ul>
+                        <li>2 Hour minimum blocks</li>
+                        <li>Hours can be booked in any configuration (2 Hours, 24 Hour lockout, etc.)</li>
+                        <li>Complete access to Studio A</li>
+                        <li>Complete Access to Control Room</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </section>
+        <!-- REHEARSAL ROOM -->
+        <section class="rehearsal-room">
+
+        </section>
+        <!-- CONTROL ROOM -->
+        <section class="control-room">
+
+        </section>
+        <!-- AMENITIES -->
+        <section class="amenities">
+
+        </section>
+        <!-- ABOUT -->
+        <section class="about">
+
+        </section>
+
         <!-- Google Maps Embed -->
         <section class="map-container">
             <h5>
@@ -43,9 +97,19 @@
     </main>
 
     <footer>
-        <h6>Contact us at <a href="mailto:orbmusicstudios@gmail.com">orbmusicstudios@gmail.com</a></h6>
+        <h6 class="bebas">Contact us at <a href="mailto:orbmusicstudios@gmail.com">orbmusicstudios@gmail.com</a></h6>
         <p>&copy; 2025 Orb Studios, Inc. All rights reserved.</p>
     </footer>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
