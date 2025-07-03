@@ -3,7 +3,7 @@ const site = 'https://orbstudios.ca';
 // Initialize EmailJS when the page loads
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize EmailJS - Replace with your actual public key
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("y5-Zr5PiJXVG3AbTI");
 
     // Add event listener to the booking button
     const sendBookingBtn = document.getElementById('sendBookingBtn');
@@ -35,7 +35,7 @@ function sendBookingEmail() {
     const templateParams = prepareEmailData(form);
 
     // Send email using EmailJS
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('service_odf7xog', 'template_jav278e', templateParams)
         .then(function (response) {
             console.log('Email sent successfully!', response.status, response.text);
             showAlert('Booking request sent successfully! We\'ll get back to you soon.', 'success');

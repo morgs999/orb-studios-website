@@ -142,94 +142,6 @@ section {
     }
 }
 
-/* Badge Animation */
-.pulse {
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-/* Music Icon Container */
-.music-icon-container {
-    position: relative;
-    display: inline-block;
-}
-
-.music-icon {
-    background: linear-gradient(135deg, var(--oorange), #ff7a3d) !important;
-    border: 4px solid white;
-    box-shadow: 0 8px 25px rgba(242, 92, 22, 0.3);
-    transition: all 0.3s ease;
-}
-
-.music-icon:hover {
-    transform: rotate(360deg) scale(1.1);
-    box-shadow: 0 12px 35px rgba(242, 92, 22, 0.4);
-}
-
-/* Floating Musical Notes */
-.floating-notes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.floating-notes i {
-    position: absolute;
-    font-size: 1.2rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-.floating-notes i:nth-child(1) {
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-notes i:nth-child(2) {
-    top: 60%;
-    right: 10%;
-    animation-delay: 1s;
-}
-
-.floating-notes i:nth-child(3) {
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 2s;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-        opacity: 0.7;
-    }
-
-    33% {
-        transform: translateY(-15px) rotate(120deg);
-        opacity: 1;
-    }
-
-    66% {
-        transform: translateY(-5px) rotate(240deg);
-        opacity: 0.8;
-    }
-}
-
 /* Feature Cards */
 .feature-icons .feature-card {
     padding: 1rem;
@@ -406,6 +318,10 @@ section {
 }
 
 /* ABOUT US */
+.about {
+    flex-direction: row;
+}
+
 .aboutcard {
     width: 100%;
 }
@@ -538,5 +454,78 @@ footer h6 {
     .amenities .map-container {
         width: 100%;
         margin: 1rem 0;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+}
+
+/* Record Player Animation */
+.record-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    position: relative;
+}
+
+.record-player {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-record {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+    transition: animation-duration 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.record-center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile responsiveness for record */
+@media (max-width: 768px) {
+    .record-player {
+        width: 120px;
+        height: 120px;
+    }
+
+    .rotating-record {
+        width: 120px;
+        height: 120px;
+    }
+
+    .record-center {
+        width: 16px;
+        height: 16px;
     }
 }
