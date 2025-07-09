@@ -1,6 +1,8 @@
 /* Variables */
 :root {
-    --oorange: #f25c16;
+    /* --oorange: #f25c16; */
+    --oorange: #743433;
+    --oorangeTwo: #5f1c21;
     --dark: #333;
     --light: #f9f9f9;
     --shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
@@ -89,6 +91,7 @@ section {
     font-family: "Bebas Neue", sans-serif;
     font-size: 3rem;
     text-align: center;
+    padding-top: 1rem;
 }
 
 .card-title {
@@ -124,86 +127,11 @@ section {
 }
 
 .blurb .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.02);
+    /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15); */
 }
 
-.blurb .card:hover::before {
-    animation: shimmer 2s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-    }
-
-    100% {
-        transform: translateX(100%) translateY(100%) rotate(45deg);
-    }
-}
-
-/* Feature Cards */
-.feature-icons .feature-card {
-    padding: 1rem;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.feature-icons .feature-card:hover {
-    background: rgba(242, 92, 22, 0.05);
-    transform: translateY(-5px);
-}
-
-.feature-icons .feature-card i {
-    transition: all 0.3s ease;
-}
-
-.feature-icons .feature-card:hover i {
-    transform: scale(1.2) rotate(5deg);
-}
-
-/* Call to Action Button */
-.cta-button {
-    background: linear-gradient(135deg, var(--oorange), #ff7a3d);
-    border: none;
-    padding: 15px 40px;
-    border-radius: 2px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-.cta-button:hover {
-    background: linear-gradient(135deg, #ff7a3d, var(--oorange));
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(242, 92, 22, 0.4);
-}
-
-.cta-button:hover::before {
-    left: 100%;
-}
-
-/* Typography Enhancements */
 .blurb .card-title {
-    background: linear-gradient(135deg, var(--dark), var(--oorange));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     position: relative;
 }
@@ -218,41 +146,124 @@ section {
     font-weight: 700;
 }
 
-.blurb .lead em {
+.blurb em {
     color: var(--dark);
     font-style: italic;
     font-weight: 600;
 }
 
-/* Mobile Responsiveness for Blurb */
-@media (max-width: 1048px) {
-    .blurb .music-icon {
-        width: 80px !important;
-        height: 80px !important;
+/* Feature Cards */
+.feature-icons .feature-card {
+    padding: 1rem;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-icons .feature-card:hover {
+    background: var(--light);
+    transform: translateY(-5px);
+}
+
+.feature-icons .feature-card i {
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.feature-icons .feature-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.feature-card h6 {
+    color: var(--oorangeTwo)
+}
+
+.btn-link .feature-card {
+    color: inherit;
+    border: none;
+    background: none;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+
+/* Record Player Animation */
+.record-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    position: relative;
+}
+
+.record-player {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-record {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+    transition: animation-duration 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.record-center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
 
-    .blurb .floating-notes {
-        display: none;
-        /* Hide floating notes on mobile for performance */
-    }
-
-    .blurb .card-title {
-        font-size: 2rem !important;
-    }
-
-    .blurb .card-text {
-        font-size: 1.1rem !important;
-    }
-
-    .feature-icons .col-md-4 {
-        margin-bottom: 1.5rem;
-    }
-
-    .cta-button {
-        padding: 12px 30px;
-        font-size: 1rem;
+    to {
+        transform: rotate(360deg);
     }
 }
+
+/* Call to Action Button */
+.cta-button {
+    background: linear-gradient(135deg, var(--oorange), var(--oorangeTwo));
+    /* border: none; */
+    padding: 15px 40px;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    font-size: 1.4em;
+    transition: all 0.5s ease;
+}
+
 
 /* RATES */
 .rates {
@@ -347,11 +358,11 @@ footer h6 {
 .modal-content {
     border-radius: 15px;
     border: none;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .modal-header {
-    background: linear-gradient(135deg, var(--oorange), #ff7a3d);
+    background: linear-gradient(135deg, var(--oorange), var(--oorangeTwo));
     color: white;
     border-radius: 15px 15px 0 0;
     border-bottom: none;
@@ -367,12 +378,12 @@ footer h6 {
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--oorange);
-    box-shadow: 0 0 0 0.2rem rgba(242, 92, 22, 0.25);
+    border-color: var(--dark);
+    box-shadow: var(--shadow)
 }
 
 .form-control.is-invalid {
-    border-color: #dc3545;
+    border-color: red;
 }
 
 .form-label {
@@ -381,7 +392,6 @@ footer h6 {
 }
 
 .modal-footer .btn-primary {
-    background: linear-gradient(135deg, var(--oorange), #ff7a3d);
     border: none;
     padding: 10px 25px;
     border-radius: 25px;
@@ -389,7 +399,6 @@ footer h6 {
 }
 
 .modal-footer .btn-primary:hover:not(:disabled) {
-    background: linear-gradient(135deg, #ff7a3d, var(--oorange));
     transform: scale(1.05);
 }
 
@@ -397,16 +406,6 @@ footer h6 {
     opacity: 0.7;
 }
 
-/* Feature card button styling */
-.btn-link .feature-card {
-    color: inherit;
-    border: none;
-    background: none;
-}
-
-.btn-link:hover {
-    text-decoration: none;
-}
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 1048px) {
@@ -421,6 +420,24 @@ footer h6 {
     main {
         margin: 20px;
         padding: 10px;
+    }
+
+    .blurb .card-title {
+        font-size: 2rem !important;
+    }
+
+    .blurb .card-text {
+        font-size: 1.1rem !important;
+    }
+
+    .feature-icons .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     .monthly,
@@ -458,74 +475,5 @@ footer h6 {
 
     .about {
         flex-direction: column;
-    }
-}
-
-/* Record Player Animation */
-.record-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    position: relative;
-}
-
-.record-player {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rotating-record {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    animation: spin 3s linear infinite;
-    transition: animation-duration 0.3s ease;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-}
-
-.record-center {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #333;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Spinning animation */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Mobile responsiveness for record */
-@media (max-width: 768px) {
-    .record-player {
-        width: 120px;
-        height: 120px;
-    }
-
-    .rotating-record {
-        width: 120px;
-        height: 120px;
-    }
-
-    .record-center {
-        width: 16px;
-        height: 16px;
     }
 }

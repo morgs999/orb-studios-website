@@ -2,10 +2,8 @@ const site = 'https://orbstudios.ca';
 
 // Initialize EmailJS when the page loads
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize EmailJS - Replace with your actual public key
     emailjs.init("y5-Zr5PiJXVG3AbTI");
 
-    // Add event listener to the booking button
     const sendBookingBtn = document.getElementById('sendBookingBtn');
     if (sendBookingBtn) {
         sendBookingBtn.addEventListener('click', function () {
@@ -17,27 +15,23 @@ document.addEventListener('DOMContentLoaded', function () {
     handleSecurityLinks();
 });
 
-// Main function to send booking email
 function sendBookingEmail() {
     const form = document.getElementById('bookingForm');
     const btn = document.getElementById('sendBookingBtn');
     const alertContainer = document.getElementById('alertContainer');
 
-    // Validate required fields
     if (!validateForm()) {
         return;
     }
 
-    // Show loading state
     setButtonLoading(btn, true);
 
-    // Prepare email data
     const templateParams = prepareEmailData(form);
 
     // Send email using EmailJS
     emailjs.send('service_odf7xog', 'template_jav278e', templateParams)
         .then(function (response) {
-            console.log('Email sent successfully!', response.status, response.text);
+            // console.log('Email sent successfully!', response.status, response.text);
             showAlert('Booking request sent successfully! We\'ll get back to you soon.', 'success');
             form.reset();
 
@@ -54,12 +48,10 @@ function sendBookingEmail() {
             showAlert('Failed to send booking request. Please try again or contact us directly.', 'danger');
         })
         .finally(function () {
-            // Reset button state
             setButtonLoading(btn, false);
         });
 }
 
-// Validate form fields
 function validateForm() {
     const requiredFields = ['clientName', 'clientEmail', 'rentalType', 'sessionType'];
     let isValid = true;
@@ -83,7 +75,6 @@ function validateForm() {
     return isValid;
 }
 
-// Prepare email template parameters
 function prepareEmailData(form) {
     const formData = new FormData(form);
     const templateParams = {};
@@ -117,7 +108,6 @@ function prepareEmailData(form) {
     return templateParams;
 }
 
-// Show alert messages
 function showAlert(message, type) {
     const alertContainer = document.getElementById('alertContainer');
     if (!alertContainer) return;
@@ -140,7 +130,6 @@ function showAlert(message, type) {
     }, 5000);
 }
 
-// Set button loading state
 function setButtonLoading(btn, isLoading) {
     if (!btn) return;
 
