@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Handle modal events
+// Handle booking modal
 document.addEventListener('DOMContentLoaded', function () {
     const bookingModal = document.getElementById('bookingModal');
     if (bookingModal) {
@@ -217,4 +217,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+});
+
+// Handle image modals
+document.addEventListener('DOMContentLoaded', function () {
+    const clickableImages = document.querySelectorAll('.clickable-image');
+    const modalImage = document.getElementById('modalImage');
+    const imageModalLabel = document.getElementById('imageModalLabel');
+
+    clickableImages.forEach(image => {
+        image.addEventListener('click', function () {
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+            imageModalLabel.textContent = this.alt;
+        });
+    });
+
+    modalImage.addEventListener('click', function () {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('imageModal'));
+        modal.hide();
+    });
 });
