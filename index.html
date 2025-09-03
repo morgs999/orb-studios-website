@@ -116,7 +116,7 @@
         <div class="mt-5"></div>
         <section class="rates m-2 p-2" id="rates">
             <div class="card monthly m-2 shadow">
-                <h1 class="card-header card-header-title">Monthly Rate</h1>
+                <h1 class="card-header card-header-title">All Inclusive Monthly Rate</h1>
                 <div class="card-body public-sans">
                     <h2 class="card-text">$400 per month</h2>
                     <ul class="list-group list-group-flush">
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="card hourly m-2 shadow">
-                <h1 class="card-header card-header-title">Hourly Rate</h1>
+                <h1 class="card-header card-header-title">Recording Studio Hourly Rate</h1>
                 <div class="card-body public-sans">
                     <h2 class="card-text">$50 per hour</h2>
                     <ul class="list-group list-group-flush">
@@ -146,6 +146,24 @@
                             etc.)</li>
                         <li class="list-group-item">Complete access to Studio A</li>
                         <li class="list-group-item">Complete Access to Control Room</li>
+                    </ul>
+                    <div class="mt-auto">
+                        <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card hourly m-2 shadow">
+                <h1 class="card-header card-header-title">Rehearsal Room Hourly Rate</h1>
+                <div class="card-body public-sans">
+                    <h2 class="card-text">$30 per hour</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">No minimum blocks</li>
+                        <li class="list-group-item">Hours can be booked in any configuration (2 Hours, 24 Hour lockout,
+                            etc.)</li>
+                        <li class="list-group-item">Complete access to Studio A</li>
                     </ul>
                     <div class="mt-auto">
                         <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal"
@@ -175,11 +193,11 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="public/fromdoor.JPG" class="d-block w-100 carousel-img clickable-image"
+                            <img src="public/studioone.png" class="d-block w-100 carousel-img clickable-image"
                                 alt="Rehearsal Room View From Door" data-bs-toggle="modal" data-bs-target="#imageModal">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/fromdrums.JPG" class="d-block w-100 carousel-img clickable-image"
+                            <img src="public/studiotwo.png" class="d-block w-100 carousel-img clickable-image"
                                 alt="Rehearsal Room View From Back Wall" data-bs-toggle="modal"
                                 data-bs-target="#imageModal">
                         </div>
@@ -208,7 +226,7 @@
                     <li class="list-group-item">Orange Guitar Amp/Cab Combo</li>
                     <li class="list-group-item">Fender '65 Deluxe Reverb</li>
                     <li class="list-group-item">Allen & Heath ZED 4 Channel Mixer</li>
-                    <li class="list-group-item">Yorkville PA Speakers</li>
+                    <li class="list-group-item">Yorkville PA System/Speakers</li>
                     <li class="list-group-item">Assorted Dynamic Mics (57s, 58s, 421, d112s, etc.)</li>
                 </ul>
                 <!-- <div class="card-body"> -->
@@ -235,7 +253,7 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="public/controlroomright.png" class="d-block w-100 carousel-img clickable-image"
+                            <img src="public/consoleone.png" class="d-block w-100 carousel-img clickable-image"
                                 alt="Control Room Right View" data-bs-toggle="modal" data-bs-target="#imageModal">
                         </div>
                         <div class="carousel-item">
@@ -243,7 +261,7 @@
                                 alt="Control Room Left View" data-bs-toggle="modal" data-bs-target="#imageModal">
                         </div>
                         <div class="carousel-item">
-                            <img src="public/controlroomconsole.png" class="d-block w-100 carousel-img clickable-image"
+                            <img src="public/controlroomright.png" class="d-block w-100 carousel-img clickable-image"
                                 alt="Control Room Console View" data-bs-toggle="modal" data-bs-target="#imageModal">
                         </div>
                     </div>
@@ -265,7 +283,7 @@
                     <li class="list-group-item">Simple 2 Track Recording of Studio A Rehearsal.</li>
                     <li class="list-group-item">Full Analogue to Digital recording up to 32 channels.</li>
                     <li class="list-group-item">Allen & Heath ZED 32 Channel Mixer</li>
-                    <li class="list-group-item">Pro Tools / Logic / Reaper / Audacity / Ableton 10 Lite / GarageBand /
+                    <li class="list-group-item">Pro Tools / Logic / Reaper / Audacity / Ableton 10 Lite / GarageBand
                     </li>
                     <li class="list-group-item">88 Weighted Key Midi Keyboard and Native Instruments Komplete (with NI
                         Maschine).</li>
@@ -471,8 +489,9 @@
                                 <label for="rentalType" class="form-label">Rental Type *</label>
                                 <select class="form-select" id="rentalType" name="rental_type" required>
                                     <option value="">Select rental type...</option>
-                                    <option value="Hourly Rate ($50/hour)">Hourly Rate ($50/hour)</option>
-                                    <option value="Monthly Rate ($350/month)">Monthly Rate ($350/month)</option>
+                                    <option value="Monthly Rate ($350/month)">Monthly Rate ($400/month)</option>
+                                    <option value="Hourly Rate ($50/hour)">Hourly Recording Rate ($50/hour)</option>
+                                    <option value="Hourly Rate ($50/hour)">Hourly Rehearsal Rate ($30/hour)</option>
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">
