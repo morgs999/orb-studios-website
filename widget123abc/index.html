@@ -35,107 +35,12 @@
     </header>
 
     <main>
-        <!-- Booking Buttons -->
-        <div class="text-center my-5">
-            <button type="button" class="btn btn-primary btn-lg mx-2" data-bs-toggle="modal"
-                data-bs-target="#bookingModal1">
-                MT Booking Widget
-            </button>
-            <button type="button" class="btn btn-primary btn-lg mx-2" data-bs-toggle="modal"
-                data-bs-target="#bookingModal2">
-                MT Inquiry Widget
-            </button>
-            <button type="button" class="btn btn-primary btn-lg mx-2" data-bs-toggle="modal"
-                data-bs-target="#bookingModal3">
-                MT Simple Widget
-            </button>
-        </div>
 
-        <!-- Booking Modal 1 -->
-        <div class="modal fade" id="bookingModal1" tabindex="-1" aria-labelledby="bookingModal1Label"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="bookingModal1Label">Widget 1</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Widget 1 content goes here -->
+        <div id="mt-booking"></div>
+        <script src="https://widget.musictraveler.com/embed.js" data-container="mt-booking"
+            data-venue-id="71a528ef-9f24-42c2-987d-c453692e32e4" data-button-text="Raum buchen" data-button-bg="#1a1a2e"
+            data-button-radius="100" data-theme="dark" data-locale="en"></script>
 
-                        <div id="booking-widget-1" data-mt-widget="booking" data-studio-title="Your Studio Name"
-                            data-api-url="https://api.musictraveler.com/rpc"></div>
-
-                        <!-- Load the widget script -->
-                        <script src="https://cdn.musictraveler.com/widget/v1/embed.global.js"></script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Booking Modal 2 -->
-        <div class="modal fade" id="bookingModal2" tabindex="-1" aria-labelledby="bookingModal2Label"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="bookingModal2Label">Widget 2</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Widget 2 content goes here -->
-
-                        <div id="inquiry-widget-1" data-mt-widget="inquiry" data-studio-title="Your Studio Name"
-                            data-venue-id="YOUR_VENUE_ID" data-space-id="YOUR_SPACE_ID"></div>
-
-                        <!-- Load the widget script -->
-                        <script src="https://cdn.musictraveler.com/widget/v1/embed.global.js"></script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Booking Modal 3 -->
-        <div class="modal fade" id="bookingModal3" tabindex="-1" aria-labelledby="bookingModal3Label"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="bookingModal3Label">Widget 3</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Widget 3 content goes here -->
-
-                        <div id="simple-widget-1" data-mt-widget="simple" data-studio-title="Your Studio Name"></div>
-
-                        <!-- Load the widget script -->
-                        <script src="https://cdn.musictraveler.com/widget/v1/embed.global.js"></script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="setmore-widget-modal">
-            <script id="setmore_script" type="text/javascript"
-                src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script><a style="float: none"
-                id="Setmore_button_iframe" href="https://morganclarke.setmore.com"><img border="none"
-                    src="https://assets.setmore.com/integration/images/newdesign/others/book-now-button.svg"
-                    alt="Book an appointment with Morgan Clarke using Setmore" /></a>
-        </div>
-        <div class="setmore-widget-side">
-            <script id="setmore_script" type="text/javascript"
-                src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script><a
-                style="position: fixed; right: 0px; top: 25%; display: block; z-index: 20000" id="Setmore_button_iframe"
-                href="https://morganclarke.setmore.com"><img border="none"
-                    src="https://assets.setmore.com/integration/images/newdesign/others/book-now-button-float.svg"
-                    alt="Book an appointment with Morgan Clarke using Setmore" /></a>
-        </div>
-        <div class="setmore-widget-external">
-            <a style="float: none" target="_blank" href="https://morganclarke.setmore.com"><img border="none"
-                    src="https://assets.setmore.com/integration/images/newdesign/others/book-now-button.svg"
-                    alt="Book an appointment with Morgan Clarke using Setmore" /></a>
-        </div>
     </main>
 
     <!-- Bootstrap JS Bundle -->
